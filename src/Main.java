@@ -1,6 +1,7 @@
 import method.MethodExplorer;
+import method.ControlFlow;
+import method.Student;
 
-import java.awt.font.FontRenderContext;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -52,5 +53,28 @@ public class Main {
             boolean isEligible = explorer.checkEligibility(age, hasID);
             System.out.println("Age: " + age + ", Has ID: " + hasID + " => Eligible: " + isEligible);
         }
+
+        // Task Two
+
+        ControlFlow flow = new ControlFlow();
+        System.out.println("\n Executing getGrade Function");
+        int[] scores = {95, 82, 68, 55, 45, 105};
+        for (int score : scores) {
+            System.out.println("Score: " + score + " => Grade: " + flow.getGrade(score));
+        }
+
+        System.out.println("\n Executing FizzBuzz Function");
+        flow.fizzBuzz();
+
+        System.out.println("\n Executing Countdown Function");
+        flow.countdown(10);
+        flow.countdown(5);
+
+        //Student
+        Student studentOne = new Student("Alice", 20, "A");
+        Student studentTwo = new Student("Bob", 22, "B");
+        studentOne.introduce();
+        studentTwo.introduce();
+
     }
 }
