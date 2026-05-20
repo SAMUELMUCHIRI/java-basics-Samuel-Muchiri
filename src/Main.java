@@ -1,13 +1,52 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import method.MethodExplorer;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+import java.awt.font.FontRenderContext;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        // Class Initialization
+        MethodExplorer explorer = new MethodExplorer();
+
+        // Test values for my functions
+        ArrayList<Integer> sampleNumbers = new ArrayList<>();;
+        sampleNumbers.add(10);
+        sampleNumbers.add(-15);
+        sampleNumbers.add(0);
+        sampleNumbers.add(-1);
+        sampleNumbers.add(1);
+        sampleNumbers.add(14352);
+
+
+        Map<Integer , Boolean> eligibilityMap = new HashMap<>();
+        eligibilityMap.put(20, true);
+        eligibilityMap.put(17, false);
+        eligibilityMap.put(25, true);
+        eligibilityMap.put(19, false);
+
+        ArrayList<Double> sampleCelsius = new ArrayList<>();;;;
+        sampleCelsius.add(100.0);
+        sampleCelsius.add(-15.0);
+        sampleCelsius.add(0.0);
+
+
+        //Iterating over values
+        for (double n : sampleCelsius) {
+            System.out.println(n + "°C is " + explorer.convertTemperature(n) + "°F");
+        }
+
+        for (int n : sampleNumbers) {
+            explorer.describeNumber(n);
+        }
+
+        for(Map.Entry<Integer, Boolean> entry : eligibilityMap.entrySet())
+        {
+            int age = entry.getKey();
+            boolean hasID = entry.getValue();
+            boolean isEligible = explorer.checkEligibility(age, hasID);
+            System.out.println("Age: " + age + ", Has ID: " + hasID + " => Eligible: " + isEligible);
+        }
     }
 }
