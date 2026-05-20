@@ -71,6 +71,7 @@ public class Main {
         flow.countdown(5);
 
         //Student
+        System.out.println("\n Executing Student Class");
         Student studentOne = new Student("Alice", 20, "A");
         Student studentTwo = new Student("Bob", 22, "B");
         studentOne.introduce();

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="/ControlFlow (snapshot).java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/ControlFlow (snapshot).java" />
+              <option name="originalContent" value="package method;&#10;&#10;public class ControlFlow {&#10;    public String getGrade(int score) {&#10;        if (score &gt;= 90 &amp;&amp; score &lt;= 100) {&#10;            return &quot;A&quot;;&#10;        } else if (score &gt;= 75 &amp;&amp; score &lt; 90) {&#10;            return &quot;B&quot;;&#10;        } else if (score &gt;= 60 &amp;&amp; score &lt; 75) {&#10;            return &quot;C&quot;;&#10;        } else if (score &gt;= 50 &amp;&amp; score &lt; 60) {&#10;            return &quot;D&quot;;&#10;        } else if (score &lt; 50) {&#10;            return &quot;F&quot;;&#10;        } else {&#10;            return &quot;Invalid Score&quot;;&#10;        }&#10;    }&#10;&#10;    public void fizzBuzz()&#10;    {&#10;        for(int i = 1; i&lt;51 ;i++)&#10;        {&#10;            String output = (i%15 == 0)  ? &quot;FizzBuzz&quot; : (i%3 == 0) ? &quot;Fizz&quot; : (i%5 == 0) ? &quot;Buzz&quot; : Integer.toString(i);&#10;            System.out.println(output);&#10;        }&#10;    }&#10;    public void countdown(int n)&#10;    {&#10;        while(n &gt; 0)&#10;        {&#10;            System.out.println(n);&#10;            n--;&#10;        }&#10;        System.out.println(&quot;Go!&quot;);&#10;    }&#10;}&#10;" />
+              <option name="updatedContent" value="package method;&#10;&#10;public class ControlFlow {&#10;    public String getGrade(int score) {&#10;        if (score &gt;= 90 &amp;&amp; score &lt;= 100) {&#10;            return &quot;A&quot;;&#10;        } else if (score &gt;= 75 &amp;&amp; score &lt; 90) {&#10;            return &quot;B&quot;;&#10;        } else if (score &gt;= 60 &amp;&amp; score &lt; 75) {&#10;            return &quot;C&quot;;&#10;        } else if (score &gt;= 50 &amp;&amp; score &lt; 60) {&#10;            return &quot;D&quot;;&#10;        } else if (score &lt; 50) {&#10;            return &quot;F&quot;;&#10;        } else {&#10;            return &quot;Invalid Score&quot;;&#10;        }&#10;    }&#10;&#10;    private String getFizzBuzzValue(int i) {&#10;        int divisor = 0;&#10;        if (i % 15 == 0) divisor = 15;&#10;        else if (i % 3 == 0) divisor = 3;&#10;        else if (i % 5 == 0) divisor = 5;&#10;        &#10;        switch (divisor) {&#10;            case 15:&#10;                return &quot;FizzBuzz&quot;;&#10;            case 3:&#10;                return &quot;Fizz&quot;;&#10;            case 5:&#10;                return &quot;Buzz&quot;;&#10;            default:&#10;                return Integer.toString(i);&#10;        }&#10;    }&#10;&#10;    public void fizzBuzz()&#10;    {&#10;        for(int i = 1; i&lt;51 ;i++)&#10;        {&#10;            System.out.println(getFizzBuzzValue(i));&#10;        }&#10;    }&#10;    public void countdown(int n)&#10;    {&#10;        while(n &gt; 0)&#10;        {&#10;            System.out.println(n);&#10;            n--;&#10;        }&#10;        System.out.println(&quot;Go!&quot;);&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
