@@ -26,6 +26,7 @@ public class Main {
         eligibilityMap.put(25, true);
         eligibilityMap.put(19, false);
 
+
         ArrayList<Double> sampleCelsius = new ArrayList<>();;;;
         sampleCelsius.add(100.0);
         sampleCelsius.add(-15.0);
@@ -33,14 +34,17 @@ public class Main {
 
 
         //Iterating over values
+        System.out.println("\n Executing convertTemperature Function");
         for (double n : sampleCelsius) {
             System.out.println(n + "°C is " + explorer.convertTemperature(n) + "°F");
         }
 
+        System.out.println("\n Executing describeNumber Function");
         for (int n : sampleNumbers) {
             explorer.describeNumber(n);
         }
 
+        System.out.println("\n Executing checkEligibility Function");
         for(Map.Entry<Integer, Boolean> entry : eligibilityMap.entrySet())
         {
             int age = entry.getKey();
